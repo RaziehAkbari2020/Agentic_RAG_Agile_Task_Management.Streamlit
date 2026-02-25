@@ -36,13 +36,16 @@ from langgraph.checkpoint.memory import MemorySaver
 # -----------------------------
 # Streamlit page config
 # -----------------------------
+# --- Page config
 AGILE_ICON_URL = "https://raw.githubusercontent.com/RaziehAkbari2020/Agentic_RAG_Agile_Task_Management.Streamlit/main/Agile.png"
+
 st.set_page_config(
     page_title="Agentic RAG for Agile Task Management",
     page_icon=AGILE_ICON_URL,
-    layout="wide"
+    layout="wide",
 )
 
+# --- Style: make alerts blue
 st.markdown(
     """
     <style>
@@ -51,16 +54,35 @@ st.markdown(
         color: white !important;
         border-radius: 12px !important;
         padding: 16px !important;
+        border: none !important;
     }
     </style>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
+)
+
+# --- Title (these were your "phrases")
+st.markdown(
+    f"""
+    <h1 style="display:flex; align-items:center; gap:15px; margin-bottom: 0.2rem;">
+        <img src="{AGILE_ICON_URL}" width="70">
+        Agentic RAG for Agile Task Management
+    </h1>
+    """,
+    unsafe_allow_html=True,
 )
 
 st.caption(
     "Upload your preprocessed Agile project data (Taiga, Jira, GitHub, etc.), "
     "and chat with the AI Scrum Master assistant."
 )
+
+# --- Sidebar: API key input
+api_key = st.sidebar.text_input("OpenAI API key", type="password")
+
+if not api_key:
+    st.info("Please enter your OpenAI API key in the sidebar.")
+    st.stop()
 # -----------------------------
 # Helpers: data loading
 # -----------------------------
