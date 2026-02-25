@@ -48,7 +48,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style="display:flex; justify-content:center; align-items:center; margin-top:20px; margin-bottom:10px;">
-        <img src="Agile.png" width="80" style="margin-right:15px;">
+        <img src="Agile.png" width="250" style="margin-right:15px;">
         <h1 style="margin:0; text-align:center;">
             Agentic RAG for Agile Task Management
         </h1>
