@@ -44,11 +44,15 @@ st.set_page_config(
 )
 
 st.markdown(
-    f"""
-    <h1 style="display:flex; align-items:center; gap:12px;">
-        <img src="{AGILE_ICON_URL}" width="200" style="background:none;">
-        Agentic RAG for Agile Task Management
-    </h1>
+    """
+    <style>
+    div[data-testid="stAlert"] {
+        background: linear-gradient(90deg, #0EA5E9, #2563EB) !important;
+        color: white !important;
+        border-radius: 12px !important;
+        padding: 16px !important;
+    }
+    </style>
     """,
     unsafe_allow_html=True
 )
