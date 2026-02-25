@@ -37,7 +37,6 @@ from langgraph.checkpoint.memory import MemorySaver
 # Streamlit page config
 # -----------------------------
 AGILE_ICON_URL = "https://raw.githubusercontent.com/RaziehAkbari2020/Agentic_RAG_Agile_Task_Management.Streamlit/main/Agile.png"
-
 st.set_page_config(
     page_title="Agentic RAG for Agile Task Management",
     page_icon=AGILE_ICON_URL,
@@ -47,7 +46,7 @@ st.set_page_config(
 st.markdown(
     f"""
     <h1 style="display:flex; align-items:center; gap:12px;">
-        <img src="{AGILE_ICON_URL}" width="42">
+        <img src="{AGILE_ICON_URL}" width="42" style="background:none;">
         Agentic RAG for Agile Task Management
     </h1>
     """,
