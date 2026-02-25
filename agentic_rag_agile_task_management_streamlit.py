@@ -319,13 +319,21 @@ with st.sidebar:
     show_retrieved = st.toggle("Show retrieved context", value=True)
     tool_preview_chars = st.slider("Retrieved context preview chars", 200, 3000, 900, 50)
 
-    thread_id = st.text_input("Thread ID (memory key)", value=st.session_state.get("thread_id", "Task-thread-1"))
+    
+    thread_id = st.text_input(
+    "Chat session",
+    value=st.session_state.get("thread_id", "Task-thread-1"),
+    help="Keeps conversation memory. Change it to start a new session."
+    )
     st.session_state["thread_id"] = thread_id
+    
 
     if st.button("🧹 Reset chat"):
         st.session_state.pop("chat_messages", None)
         st.session_state.pop("last_tool_context", None)
+        st.session_state.pop("thread_id", None)   # ← این خط جدید
         st.rerun()
+   
 
 
 # -----------------------------
