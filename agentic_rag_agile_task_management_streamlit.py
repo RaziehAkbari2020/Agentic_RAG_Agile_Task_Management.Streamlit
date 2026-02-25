@@ -46,7 +46,7 @@ st.set_page_config(
 st.markdown(
     f"""
     <h1 style="display:flex; align-items:center; gap:12px;">
-        <img src="{AGILE_ICON_URL}" width="100" style="background:none;">
+        <img src="{AGILE_ICON_URL}" width="200" style="background:none;">
         Agentic RAG for Agile Task Management
     </h1>
     """,
