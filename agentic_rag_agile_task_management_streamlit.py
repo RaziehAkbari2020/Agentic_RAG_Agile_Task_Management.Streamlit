@@ -46,18 +46,28 @@ st.set_page_config(
 )
 
 st.markdown(
-    f"""
-    <h1 style="display:flex; align-items:center; gap:12px;">
-        <img src="{AGILE_ICON_URL}" width="250">
-        Agentic RAG for Agile Task Management
-    </h1>
+    """
+    <div style="display:flex; justify-content:center; align-items:center; margin-top:20px; margin-bottom:10px;">
+        <img src="Agile.png" width="80" style="margin-right:15px;">
+        <h1 style="margin:0; text-align:center;">
+            Agentic RAG for Agile Task Management
+        </h1>
+    </div>
     """,
     unsafe_allow_html=True
 )
 
-st.caption(
-    "Upload your preprocessed Agile project data (Taiga, Jira, GitHub, etc.), "
-    "and chat with the AI Scrum Master assistant."
+# st.caption(
+#     "Upload your preprocessed Agile project data (Taiga, Jira, GitHub, etc.), "
+#     "and chat with the AI Scrum Master assistant."
+# )
+st.markdown(
+    """
+    <p style="text-align:center; font-size:18px; color:#9aa0a6;">
+    Upload your preprocessed Agile task management data and chat with the AI Task Management Assistant.
+    </p>
+    """,
+    unsafe_allow_html=True
 )
 # -----------------------------
 # Helpers: data loading
