@@ -362,7 +362,7 @@ for m in st.session_state["chat_messages"]:
         st.markdown(m["content"])
 
 # Input
-prompt = st.chat_input("Ask about tasks, effort, assignees, story points, sprint order, status...")
+prompt = st.chat_input("Ask about tasks, effort estimation, assignment, workload, or progress...")
 
 if prompt and graph is not None:
     # Show user message immediately
